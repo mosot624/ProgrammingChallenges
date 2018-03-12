@@ -1,0 +1,28 @@
+public class PigLatin {
+    public static void main(String args[]) {
+        String[] arrayStrings = {"python", "banana", "happy", "duck"};
+        for(String i : arrayStrings){
+        pigLatin(i);
+        System.out.print(" ");
+        }
+    }
+    public static void pigLatin(String inputCon){
+        char[] convert = inputCon.toCharArray();
+        char firstLetter = convert[0];
+
+        if(firstLetter == 'a' || firstLetter == 'e' || firstLetter == 'i' || firstLetter == 'o' || firstLetter == 'u'){
+            for(int i = 0 ; i< convert.length ; i++){
+                System.out.print(convert[i]);
+            }
+            System.out.print("way");
+        }
+        else{
+            for(int i = 1 ; i< convert.length ; i++){
+                System.out.print(convert[i]);
+            }
+            System.out.print(convert[0]);
+            System.out.print("ay");
+        }
+
+    }
+}

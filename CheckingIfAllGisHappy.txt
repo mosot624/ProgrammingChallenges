@@ -1,0 +1,24 @@
+public class MyClass {
+    public static void main (String[] args) throws java.lang.Exception
+	{
+		gHappy("ggg");
+	}
+	public static void gHappy(String l){
+		char[] lArray = l.toCharArray();
+      	boolean gIsHappy = false;
+      	for(int i = 0; i<lArray.length();i++){
+          if(lArray[i] == 'g'){
+          if((lArray[i+1] == 'g')||(lArray[i-1] == 'g')){
+            gIsHappy = true;
+            
+          }
+          else{
+            gIsHappy = false;
+          }
+          }}
+      if(gIsHappy==true){
+       System.out.println("This is true") ;
+      }
+        
+}
+}

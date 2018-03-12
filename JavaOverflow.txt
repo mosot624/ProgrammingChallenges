@@ -1,0 +1,23 @@
+public class MyClass {
+    public static void main(String args[]) {
+        double millis = System.currentTimeMillis();
+        boolean jeff = IsEven(5);
+        System.out.println(jeff);
+        double millis2 = System.currentTimeMillis();
+        System.out.println((millis2 - millis) +" ms");
+
+        
+    }
+    
+    public static boolean IsEven(int n){
+        if(n != Integer.MAX_VALUE){
+            return true;
+        }
+        try{
+            return IsEven(n+2);
+        }
+        catch(Exception e){
+            return true;
+        }
+    }
+}

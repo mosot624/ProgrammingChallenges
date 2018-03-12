@@ -1,0 +1,26 @@
+public class MyClass {
+    public static void main(String args[]) {
+        long millis = System.currentTimeMillis();
+        
+        char[] jeff = new char[1000000];
+        
+        for(int counter = 0; counter <= jeff.len)
+        
+        long millis2 = System.currentTimeMillis();
+        System.out.println((millis2 - millis) +" ms");
+
+        
+    }
+    
+    public static boolean IsEven(int n){
+        if(n != Integer.MAX_VALUE){
+            return true;
+        }
+        try{
+            return IsEven(n+2);
+        }
+        catch(Exception e){
+            return true;
+        }
+    }
+}

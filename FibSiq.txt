@@ -1,0 +1,19 @@
+public class MyClass {
+    public static void main(String args[]) {
+        fibsiq();
+    }
+    public static void fibsiq(){
+        int x = 0;
+        int y = 1;
+        int z = 0;
+        System.out.println("0.) "+0);
+        System.out.println("1.) "+1);
+        for(int i = 2; i<=10; i++){
+            z= x+y;
+            x=y;
+            y=z;
+            System.out.println(i + ".) "+ z);
+        }
+    }
+}
+

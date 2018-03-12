@@ -1,0 +1,30 @@
+public class MyClass {
+    public static void main(String args[]) {
+        IsNotEqualls("hello my name is jeff");
+    }
+    public static void IsNotEqualls(String l){
+        char [] lArray = l.toCharArray();
+        int iscounter = 0;
+        int notcounter = 0;
+        
+        for(int i = 0; i< lArray.length;i++){
+            if(lArray[i] == 's'){
+                if(lArray[i - 1] == 'i'){
+                    iscounter++;
+                }
+            }
+            if(lArray[i] == 't'){
+                if(lArray[i - 2] == 'n' && lArray[i - 1] == 'o'){
+                    notcounter++;
+                }
+        }
+        }
+        if(iscounter==notcounter){
+            System.out.println("True");
+        }
+        else{
+            System.out.println("False");
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class DistanceTravelled {
+    public static void main(String[] args){
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("How fast we're you going?");
+        int speed = sc1.nextInt();
+        System.out.println("How long were your driving?(mins)");
+        int min = sc1.nextInt();
+        Distance(speed,min);
+    }
+    public static void Distance(int speed, int mins){
+        double hours = (double)mins / 60;
+        double distance = speed * hours;
+        System.out.println("You travelled for " + distance);
+    }
+}

@@ -1,0 +1,13 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println(ToThePowerOf(5,10));
+     }
+     public static int ToThePowerOf(int c, int k){
+        int j = 1;
+        for(int i = 0; i<k;i++){
+            j*=c;
+        }
+        return j;
+     }
+}

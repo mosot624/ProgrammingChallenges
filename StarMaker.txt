@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class DrawStar {
+    public static void main(String[] args) {
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("How big should the tree be?");
+        int i = sc1.nextInt();
+        Stars(i);
+    }
+
+    private static void Stars(int levelofStarts) {
+        int counter = 0;
+        for (int i = 1; i <= levelofStarts; i++) {
+            for (int d = 1; d <= levelofStarts + counter; d++) {
+                if (levelofStarts - counter == d) {
+                    for (; d <= levelofStarts + counter; d++) {
+                        System.out.print("*");
+                    }
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+            counter++;
+        }
+
+    }
+    
+}

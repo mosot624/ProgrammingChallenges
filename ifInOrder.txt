@@ -1,0 +1,85 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class IFSEQ {
+
+    public static void main(String[] args){
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("What word do you want to find: ");
+        String Search = sc1.nextLine();
+        String Checker = RandomLetter();
+        System.out.println(Checker);
+        ifInorderVr2(Search,Checker);
+
+    }
+
+    private static String RandomLetter(){
+        Random rand = new Random();
+        char[] randomLetter = new char [1000];
+        String AlphaBet = "abcdefghijklmnopqrstuvwxyz";
+
+        for(int i = 0 ; i< randomLetter.length; i++){
+            randomLetter[i] = AlphaBet.charAt(rand.nextInt(26));
+        }
+        String checker = new String (randomLetter);
+        return checker;
+    }
+    //This code is obsolete
+    /*public static void ifInorder(String j, String rt){
+        char[] rtArray = rt.toCharArray();
+        char[] jArray = j.toCharArray();
+        int counter= 0;
+        for(int i = 0 ; i< rtArray.length ; i++){
+            try{
+                if(rtArray[i] == jArray[counter]){
+                    counter++;
+                }
+            }
+            catch(ArrayIndexOutOfBoundsException e){
+
+            }
+        }
+        if(counter==jArray.length){
+            System.out.println("It is in order");
+        }
+        else{
+            System.out.println("It is not in order");
+        }
+    }*/
+    private static void ifInorderVr2(String j, String rt){
+        char[] rtArray = rt.toCharArray();
+        char[] jArray = j.toCharArray();
+        int counter= 0;
+        int i = 0;
+        boolean Overbound = false;
+        boolean IsWorking = false;
+        while(!Overbound  && !IsWorking ){
+
+            if(jArray.length == rt.length()){
+                System.out.println("False");
+                Overbound = true;
+            }
+            if(i  == rtArray.length){
+                System.out.println("False");
+                Overbound = true;
+            }
+
+            else if(rtArray[i] == jArray[counter]){
+                counter++;
+            }
+
+
+            if(counter  == jArray.length){
+                System.out.println("True");
+                IsWorking = true;
+            }
+
+            i++;
+        }
+
+
+
+    }
+}
+
+

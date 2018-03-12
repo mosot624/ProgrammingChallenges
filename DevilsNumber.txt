@@ -1,0 +1,15 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        DevilNumber(6000);
+     }
+     public static void DevilNumber(int c){
+        int modeqdev = c%6;
+        char[] cToChar =  String.valueOf(c).toCharArray();
+        if(modeqdev == 0){
+            for(int i = 0; i < cToChar.length; i++){
+                System.out.print("x");
+            }
+        }
+     }
+}

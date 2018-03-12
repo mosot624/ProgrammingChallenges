@@ -1,0 +1,15 @@
+public class PrimeNumbers
+{
+   public static void main (String[] args)
+   {		
+       int firstnum = 100;
+       int secondnum = firstnum*firstnum;
+       int thirdnum = firstnum*1;
+       int forthnum= thirdnum+secondnum;
+       int fifthnum= forthnum/2;
+       System.out.println("This the value of adding all numbers inbetween 1 to 100"+fifthnum);
+   }
+}
+
+//n*(firstnumber + lastnumber)/2 this is the formula for consecutive addition. 
+//n is the amount of numbers in the cequence

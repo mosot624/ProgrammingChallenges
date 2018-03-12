@@ -1,0 +1,80 @@
+
+public class Ideone
+{	
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	
+		fizzbuzzFunctionClass fizbuz1 = new fizzbuzzFunctionClass();
+		fizzbuzzClass fb1 = new fizzbuzzClass();
+        System.out.println("This just an example of a getter class"+fb1.get)
+		fizbuz1.fff();
+		
+	}
+}
+
+class fizzbuzzFunctionClass
+{
+	fizzbuzzClass fb1 = new fizzbuzzClass();
+	public void fff(){
+	    int g = -1;
+    	for(int i = 0; i>=g; i++)
+    		{
+    		    g++;
+    			fb1.setInt(g);
+    			if(fb1.getInt()==420)
+    			{
+    				System.out.println("420 Blaze it");
+    				
+    			}
+    			else if(fb1.getInt()%3==0 && fb1.getInt()%4==0 && fb1.getInt()%5==0)
+    			{
+    				System.out.println("FizzBuzz Cuzz "  + fb1.getInt());
+    				
+    			}
+    			
+    			else if(fb1.getInt()%3==0 && fb1.getInt()%4==0)
+    			{
+    				System.out.println("Fizzbuzz " + fb1.getInt());
+    				
+    			}
+    			else if(fb1.getInt()%3==0 && fb1.getInt()%5==0)
+    			{
+    				System.out.println("Fizz Cuzz " + fb1.getInt());
+    				
+    			}
+    			else if(fb1.getInt()%4==0 && fb1.getInt()%5==0)
+    			{
+    				System.out.println("Buzz Cuzz " + fb1.getInt());
+    				
+    			}
+    			else if(fb1.getInt()%3==0)
+    			{
+    				System.out.println("Fizz " + fb1.getInt());
+    			}
+    			else if(fb1.getInt()%4==0)
+    			{
+    				System.out.println("buzz " + fb1.getInt());
+    			}
+    			else if(fb1.getInt()%5==0)
+    			{
+    				System.out.println("Cuzz " + fb1.getInt());
+    			}
+    			else
+    			{
+    				System.out.println(fb1.getInt());
+    			}
+    		}
+		}   
+}
+class fizzbuzzClass
+{
+	private int c;
+	public int getInt()
+	{
+		return this.c;
+	}
+	public void setInt(int setIntiger)
+	{
+		this.c = setIntiger;
+	}
+}

@@ -1,0 +1,28 @@
+public class HelloWorld{
+
+     public static void main(String []args){
+        fibAdder();
+     }
+     public static void fibAdder(){
+         int[] fib = new int[15];
+         int x = 0;
+         fib[0] = 0;
+         fib[1] = 1;
+         System.out.println(fib[0]);
+         System.out.println(fib[1]);
+         for(int i = 2; i < fib.length;i++){
+             try{
+             fib[i] = fib[i-1] + fib[i-2];
+             }catch(Exception z){
+                 
+             }
+             if(fib[i]%2==0){
+                 x += fib[i];
+             }
+             System.out.println(fib[i]);
+         }
+         System.out.println();
+         System.out.println(x);
+         
+     }
+}

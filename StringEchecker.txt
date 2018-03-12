@@ -1,0 +1,32 @@
+public class MyClass {
+    public static void main(String args[]) {
+        
+         boolean checker1 = true;
+         int eAmount1 = 0;
+        
+        
+        String word1 = "helleeeeeee";
+        
+        char[] Echecker1 = word1.toCharArray();
+        
+        for(int i =0; i< Echecker1.length; i++){
+            if(Echecker1[i] == 'e'){
+                eAmount1++;
+            }
+            else{
+                
+            }
+        }
+        
+        if(eAmount1 >= 1 && eAmount1 <= 3 ){
+            System.out.println("Word have 1 to 3 e");
+        }
+        else{
+            System.out.println("Word doesn't have 1 to 3 e");
+        }
+        
+        
+        
+    }
+    
+}

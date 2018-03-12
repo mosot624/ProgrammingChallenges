@@ -1,0 +1,48 @@
+public class HelloWorld{
+    
+    
+        
+     public static void main(String []args){
+         int i =tickerLevel(65,true);
+         System.out.println("Your ticket is " + i);
+         
+         
+     }
+     
+     public static int tickerLevel(int speed, boolean isYourBirthday) {
+          if(speed >=0 && speed <=65){
+             if(isYourBirthday == true && speed <= 65){
+                System.out.println("Its your birthday");
+                return 0;
+           
+             }
+             else{
+                 return 1;
+             }
+         }
+         else if(speed >=66 && speed <=85){
+             if(isYourBirthday == true && (speed <= 85 || speed <= 66)){
+                System.out.println("Its your birthday");
+                return 1;
+           
+             }
+             else{
+                 return 2;
+             }
+         }
+         else if(speed >=86){
+             if(isYourBirthday == true && speed <= 86){
+                return 2;
+             }
+             else{
+                 return 3;
+             }
+         }
+         
+     
+         
+         return 10;
+        
+        
+}
+}

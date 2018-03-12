@@ -1,0 +1,38 @@
+import java.util.stream.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        int counter = 1;
+        int counterMax= 100;
+        int forArray= 0;
+        int[] anArray = new int[counterMax];
+        for(int i = 2;i==i;i++){
+            Boolean check = true;
+            for(int j =2; j<i;j++){
+                if(i%j==0){
+                    check=false;
+                    break;
+                }
+            }
+            if(check==true){
+                System.out.println(counter+".) "+i+" is a prime number");
+                anArray[forArray]= i;
+                forArray++;
+                counter++;
+            }
+            else{
+            }
+            if(counter>counterMax){
+            int sum = IntStream.of(anArray).sum();
+            System.out.println("");
+            System.out.println("The sum is " + sum);
+            break;
+            }
+            }
+
+    }
+}
+
+
+
+

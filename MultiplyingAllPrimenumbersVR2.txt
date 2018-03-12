@@ -1,0 +1,43 @@
+import java.util.stream.*;
+import java.text.NumberFormat.*;
+import java.util.Locale.*;
+
+
+public class MyClass {
+    public static void main(String args[]) {
+        int counter = 1;
+        int counterMax= 10;
+        int forArray= 0;
+        double mul=1;
+        int[] anArray = new int[counterMax];
+        for(int i = 2;i==i;i++){
+            Boolean check = true;
+            for(int j =2; j<i;j++){
+                if(i%j==0){
+                    check=false;
+                    break;
+                }
+            }
+            if(check==true){
+                System.out.println(counter+".) "+i+" is a prime number");
+                anArray[forArray]= i;
+                forArray++;
+                counter++;
+            }
+            else{
+            }
+            if(counter>counterMax){
+                for(int z=0;z<anArray.length;z++){
+                    mul *= anArray[z];
+                }
+            String numberAsString = String.format("%,.0f", mul);
+            String numberAsString1 = String.format("%,.2f", Double.MAX_VALUE);
+
+            //System.out.println(numberAsString1);
+            System.out.println("Multiplying all prime number is: "+ numberAsString);
+            break;
+            }
+        }
+
+    }
+}

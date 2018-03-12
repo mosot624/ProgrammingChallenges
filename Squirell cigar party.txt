@@ -1,0 +1,29 @@
+public class HelloWorld{
+    
+    
+        
+     public static void main(String []args){
+         cigarParty(5,false)
+         
+         
+         
+     }
+     
+     public static boolean cigarParty(int cigars, boolean isWeekend) {
+        if(isWeekend == true){
+            System.out.println("No limite when its weekend");
+            return true;
+        }
+        else if(cigars >= 40 && cigars <=60){
+             System.out.println("You are allowed");
+             return true;
+         }
+         else{
+              System.out.println("You not are allowed");
+              return false;
+         }
+        
+}
+
+
+Squirell cigar party

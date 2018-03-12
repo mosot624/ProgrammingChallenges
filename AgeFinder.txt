@@ -1,0 +1,31 @@
+import java.time.LocalDate;
+import java.time.Year;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+public class BirthDayFinder {
+    public static void main(String[] args){
+        age();
+
+    }
+    public static void age(){
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("What year we're you born");
+        int year = sc1.nextInt();
+        System.out.println("What month we're you born (Use number please)");
+        int month = sc1.nextInt();
+        System.out.println("What day we're you born");
+        int days = sc1.nextInt();
+        LocalDate start = LocalDate.of(year, month, days);
+        LocalDate end = LocalDate.now();
+        long years = ChronoUnit.YEARS.between(start, end);
+        long HoursFromNow = ChronoUnit.DAYS.between(start, end);
+        System.out.println(years);
+        System.out.println("Amount of Days has passed: " + HoursFromNow);
+        if(years>=18){
+            System.out.println("You are allowed to vote");
+        }else{
+            System.out.println("You are not allowed to vote");
+        }
+    }
+}
